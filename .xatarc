@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Micha-Jak-bczyk-s-workspace-0svnib.eu-central-1.xata.sh/db/next",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

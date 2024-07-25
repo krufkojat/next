@@ -1,9 +1,7 @@
- import Image from "next/image";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
-      elo melo!
-    </main>
+    <main className="mx-4 basis-0.5 px-0 text-center text-2xl">elo melo!</main>
   );
 }

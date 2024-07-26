@@ -24,7 +24,7 @@ async function handler(request: Request) {
     ) as Event;
   } catch (err) {
     console.error((err as Error).message);
-    return NextResponse.json({}, { status: 400 });
+    return Response.json({}, { status: 400 });
   }
 
   const eventType = evt.type;

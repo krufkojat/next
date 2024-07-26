@@ -6,7 +6,7 @@ import { prisma } from "@/lib/db";
 
 const webhookSecret = process.env.WEBHOOK_SECRET || "";
 
-async function handler(request: Request) {
+async function handler(request: Request): Promise<any> {
   const payload = await request.json();
   const headersList = headers();
   const heads = {
@@ -24,7 +24,7 @@ async function handler(request: Request) {
     ) as Event;
   } catch (err) {
     console.error((err as Error).message);
-    return Response.json({}, { status: 400 });
+    return NextResponse.json({}, { status: 400 });
   }
 
   const eventType = evt.type;
